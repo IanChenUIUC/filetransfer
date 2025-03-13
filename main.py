@@ -32,8 +32,8 @@ methods = [
         "NeighborJoinJC",
 ]
 models = [
-        "Gamma/1000M1",
-        "Gamma/1000M4",
+        "CAT/1000M1",
+        "CAT/1000M4",
 ]
 
 # columns: method, FN/FP R0..., FP/FN average
@@ -63,4 +63,4 @@ for d in models:
         data[f"FP (avg)"].append(sum_FP / replicates)
 
 df = pd.DataFrame.from_dict(data)
-df.to_csv("summary_Gamma.csv", index=False)
+df.to_csv("summary_CAT.csv", index=False)
